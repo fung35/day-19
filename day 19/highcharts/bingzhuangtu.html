@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的得分技巧占比</title>
+    <style>
+        #container {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/highcharts.js"></script>
+</head>
+<body>
+<!--图表容器-->
+  <div id="container"></div>
+<script>
+    $(function (){
+        /*使用jquery方式*/
+        $("#container").highcharts(
+            {
+                /*指定图表类型*/
+                chart: {
+                    type: 'pie'
+                }
+                ,
+                title: {
+                    text: 'fung篮球得分技巧占比'
+                },
+                /*设置数据列*/
+                series:[{
+                    name:"此技巧得分占比",/*数据名字*/
+                    data:[
+                        ["中远距离投篮",40],
+                        ["三分",5],
+                        ["突破",10],
+                        ["内线",20],
+                        ["罚篮",15],
+                        ["其他",10]]
+                }]
+            }
+        )
+    })
+</script>
+</body>
+</html>

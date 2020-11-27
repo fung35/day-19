@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换</title>
+</head>
+<body>
+    <img src="images/img1.jpg" id="img1" width="200" height="200">
+    <br>
+    <button id="prev">上一张</button>
+    <button id="next">下一张</button>
+    <script type="text/javascript">
+        /*1.获取事件源*/
+        var img1 = document.getElementById("img1");
+        var prevbtn = document.getElementById("prev");
+        var nextbtn = document.getElementById("next");
+        var minindex = 1;
+        var maxindex = 4;
+        var currentindex;
+        currentindex = minindex;
+        prevbtn.onclick = function (){
+            if(currentindex === minindex){
+                currentindex = maxindex
+            }else{
+                currentindex--;
+            }
+            img1.setAttribute('src','images/img{$currentindex}.jpg');
+        }
+    </script>
+
+</body>
+</html>

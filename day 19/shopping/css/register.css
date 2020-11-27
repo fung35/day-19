@@ -1,0 +1,43 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+body {
+    background-color: skyblue;
+}
+.reg_form {
+    position: relative;
+    width: 600px;
+    margin: 40px auto 0;
+
+}
+.reg_form ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.btn {
+    position: absolute;
+    cursor: pointer;
+    left: 10%;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    color: white;
+    background-color: red;
+}
+.mima {
+    position: relative;
+}
+.mima>a {
+    position: absolute;
+    right: 50%;
+    cursor: pointer;
+}
+.mima> a:visited .mima>#pwd{
+    display: block;
+}
+#checkcode {
+    background-color: transparent;
+}

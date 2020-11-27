@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+    <script src="js/highcharts.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+<script>
+    /*图表的配置*/
+    var options ={
+        chart:{
+            type: 'bar' /*指定为条形图*/
+        },
+    title:{
+         text:'我的第一个图表'
+    },
+        subtitle:{
+            text:'数据来源：问卷'
+        },
+        xAxis:{
+            title:{
+                text:'水果分类'
+            },
+            categories:['西瓜','芒果','葡萄']
+        },
+        yAxis:{
+            /*不显示刻度*/
+            labels:{
+                enabled:true,
+                /*自定义显示刻度*/
+                formatter:function(){
+                    return this.value + "个"
+                },
+                /*定义步长*/
+                step:1
+            },
+            title:{
+                text: null
+            }
+        },
+        series:[
+            {
+                name:"fung",
+                data:[["8424",1],["青芒",0],["提子",4]]
+            },
+            {
+                name: "durant",
+                data: [["8424",5],["青芒",9],["提子",3]]
+            }
+        ]
+    };
+    /*图标初始化函数*/
+    var chart = Highcharts.chart("container",options);
+</script>
+</body>
+</html>
